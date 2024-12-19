@@ -35,7 +35,7 @@ class TestTextNode(unittest.TestCase):
 class TestTextNodeToHTMLNode(unittest.TestCase):
 
     def test_text_to_html(self):
-        normal_text = TextNode("hello world", TextType.NORMAL)
+        normal_text = TextNode("hello world", TextType.TEXT)
         bold_text = TextNode("hello world", TextType.BOLD)
         italic_text = TextNode("hello world", TextType.ITALIC)
         code_text = TextNode("hello world", TextType.CODE)
