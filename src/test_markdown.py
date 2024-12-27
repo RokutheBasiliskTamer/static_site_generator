@@ -1,7 +1,6 @@
 import unittest
 from textnode import TextNode, TextType
 from markdownreaders import split_nodes_delimiter, extract_markdown_images, extract_markdown_links, split_nodes_link, split_nodes_image, text_to_textnodes
-
 class TestMarkdownSplitters(unittest.TestCase):
     def test_split(self):
         node = TextNode("This is text with a `code block` word", TextType.TEXT)
@@ -139,7 +138,8 @@ class TestMarkdownSplitters(unittest.TestCase):
                               TextNode(" and a ", TextType.TEXT),TextNode("link", TextType.LINK, "https://boot.dev"),],
                               text_to_textnodes(text))
         
-                            
+    
+
 class TestURLExtractors(unittest.TestCase):
     def test_img_extraction(self):
         text = "This is text with a ![rick roll](https://i.imgur.com/aKaOqIh.gif) and ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg)"

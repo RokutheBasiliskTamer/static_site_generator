@@ -48,6 +48,7 @@ class TestTextNodeToHTMLNode(unittest.TestCase):
         code_html = LeafNode("code", "hello world")
         link_html = LeafNode("a", "hello world", {"href": "./src"})
         image_html = LeafNode("img", "", {"src": "./src", "alt": "hello world"})
+        
 
         self.assertEqual(text_node_to_html_node(normal_text), normal_html)
         self.assertEqual(text_node_to_html_node(bold_text), bold_html)
